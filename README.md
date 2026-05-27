@@ -15,5 +15,9 @@ python3 main.py
 - Nmap
 - Groq API anahtarı
 
-### 🖼️ Uygulama Ekran Görüntüsü
-![Ekran Görüntüsü](Screenshot_2026-05-27_11_07_37.png)
+### 🖼️ Uygulama Ekran Görüntüleri
+![Ekran Görüntüsü 1](IMG_0403.jpeg)
+
+![Ekran Görüntüsü 2](IMG_0404.jpeg)
+
+![Ekran Görüntüsü 3](IMG_0405.jpeg)
