@@ -13,5 +13,5 @@ python3 main.py
 ## Gereksinimler
 - Python 3.x
 - Nmap
-- Gemini API anahtarı
+- Groq API anahtarı
 
