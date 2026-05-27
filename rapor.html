@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Güvenlik Tarama Raporu</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        h1 { color: #d32f2f; }
+        h2 { color: #1565c0; border-bottom: 2px solid #1565c0; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th { background: #1565c0; color: white; padding: 10px; }
+        td { padding: 8px; border: 1px solid #ddd; }
+        .eksik { color: red; font-weight: bold; }
+        .var { color: green; }
+        .ai-analiz { background: white; padding: 20px; border-left: 4px solid #d32f2f; }
+        .bilgi { background: #e3f2fd; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🔒 Siber Güvenlik Tarama Raporu</h1>
+    <div class="bilgi">
+        <b>Hedef IP:</b> 172.17.0.2<br>
+        <b>Tarih:</b> 27/05/2026 08:51
+    </div>
+
+    <h2>📡 Nmap Port Tarama Sonuçları</h2>
+    <table>
+        <tr><th>Port</th><th>Protokol</th><th>Servis</th><th>Versiyon</th></tr>
+        
+        <tr>
+            <td>80</td>
+            <td>tcp</td>
+            <td>http</td>
+            <td>2.4.25</td>
+        </tr>
+        
+    </table>
+
+    <h2>🌐 Web Header Analizi</h2>
+    
+    <h3>http://172.17.0.2 - HTTP 200</h3>
+    <table>
+        <tr><th>Başlık</th><th>Durum</th><th>Değer</th></tr>
+        
+        <tr>
+            <td>X-Frame-Options</td>
+            <td class="eksik">✗ EKSİK</td>
+            <td>-</td>
+        </tr>
+        
+        <tr>
+            <td>X-XSS-Protection</td>
+            <td class="eksik">✗ EKSİK</td>
+            <td>-</td>
+        </tr>
+        
+        <tr>
+            <td>X-Content-Type-Options</td>
+            <td class="eksik">✗ EKSİK</td>
+            <td>-</td>
+        </tr>
+        
+        <tr>
+            <td>Strict-Transport-Security</td>
+            <td class="eksik">✗ EKSİK</td>
+            <td>-</td>
+        </tr>
+        
+        <tr>
+            <td>Content-Security-Policy</td>
+            <td class="eksik">✗ EKSİK</td>
+            <td>-</td>
+        </tr>
+        
+        <tr>
+            <td>Referrer-Policy</td>
+            <td class="eksik">✗ EKSİK</td>
+            <td>-</td>
+        </tr>
+        
+        
+    </table>
+    
+
+    <h2>🤖 AI Risk Analizi</h2>
+    <div class="ai-analiz">
+        <pre>**Genel Risk Değerlendirmesi**
+
+Siber güvenlik tarama sonuçları, sisteminin güvenlik açıkları ve risklerini göstermektedir. Sonuçlar aşağıdaki gibidir:
+
+- Sistemin bir HTTP sunucusu (Apache/2.4.25 (Debian)) olduğu belirlenmiştir.
+- URL(http://172.17.0.2)'nin durum kodu 200 olrak alınmıştır. Bu genellikle başarılı bir istek anlamındır.
+- Sunucudaki bazı güvenlik başlıklarının (Header) eksik/eksik olduğu tespit edilmiştir.
+
+**Kritik Bulgular**
+
+- **Gerekli Güvenlik Başlıkları Eksik/eksik**: Sunucuda bazı kritik güvenlik başlıklarının eksik/eksik olduğu görülmektedir. Bu başlıklar:
+ + X-Frame-Options: Bu başlık, sunucuya yönelik iframe saldırılarını önler.
+ + X-XSS-Protection: Bu başlık, Web tarayıcılarının XSS saldırılarını önlemesine yardımcı olur.
+ + X-Content-Type-Options: Bu başlık, sunucuya yönelik Content-Type ataşmanı saldırılarını önler.
+ + Strict-Transport-Security: Bu başlık, SSL/TLS protokolünü zorunlu kılar ve sertifikası geçersiz sayılmasını önler
+ + Content-Security-Policy: Bu başlık, sunucudaki İçerik Güvenlik Politikasını yönetir ve XSS saldırılarını önler.
+ + Referrer-Policy: Bu başlık, referans URL'lerini sınırlandırır ve bilgi çalıntılarını önler.
+
+- **Kalan Güvenlik Riski**: Sistemin bir HTTP sunucusu olduğunu söyleyen durum, siber güvenlik açısından risk içermektedir. Özellikle sistemin açık olan TCP portu risk oluşturabilir. 
+
+**Öneriler**
+
+- **Gerekli Güvenlik Başlıklarının Eklendiğini Tehdit Ettirmek**:
+ + X-Frame-Options'u, X-XSS-Protection'u, X-Content-Type-Options'u, Strict-Transport-Security'i, Content-Security-Policy'yi ve Referrer-Policy'yi aktif ederek sunucu güvenliğini artırabilirsiniz.
+- **Sistemin Açık Olduğu TCP Portundan Korumak**:
+ + Sistemin açık portunu kapatarak siber saldırılara karşı koruma sağlayabilirsiniz.
+- **Sistem Kurulumunu Güncelleştirmek**:
+ + sistemin kurulumunu ve işletim sistemini güncellemek, güvenlik açıklarını kapatarak sistemin güvenliğini artıracaktır.
+ 
+Bu öneriler, sistemin güvenlik risklerini minimum seviyelere indirmek ve olası saldırıları önlemektedir.</pre>
+    </div>
+</body>
+</html>
+    
